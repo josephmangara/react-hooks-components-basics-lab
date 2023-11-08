@@ -1,24 +1,18 @@
-import React, { useRef } from "react";
+
+import React from "react";
+
 
 function Navbar() {
-    const homeRef = useRef(null);
-    const aboutRef = useRef(null);
-
-    const scrollToSection = (ref) => {
-        ref.current.scrollIntoView({ behavior: "smooth" });
-    };
-
     return (
         <nav>
-            <a onClick={() => scrollToSection(homeRef)}>Home</a>
-            <a onClick={() => scrollToSection(aboutRef)}>About</a>
+            <a href="#home">I'm a link!</a>
         </nav>
     );
 }
 
 function Home() {
     return (
-        <div ref={homeRef}>
+        <div id="home">
             <h1>Home</h1>
         </div>
     );
@@ -26,7 +20,7 @@ function Home() {
 
 function About() {
     return (
-        <div ref={aboutRef}>
+        <div id="about">
             <h1>About</h1>
         </div>
     );
